@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
@@ -29,8 +29,6 @@ jobs:
 
       # Create Postgres users and database
       # Note the YAML heredoc '|' for nicer formatting
-      - run: |
-          sudo createdb -h localhost test_db
 
       - restore_cache:
           keys:
